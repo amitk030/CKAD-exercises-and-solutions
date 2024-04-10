@@ -2,5 +2,7 @@
 
 <details>
   <summary>Solution</summary>
-  kubectl run my-pod --image=nginx:alpine
+  ```bash
+    kubectl run my-pod --image=nginx:alpine
+  ```
 </details>
