@@ -1,0 +1,22 @@
+{
+  "title": "Core Concept Pods",
+  "description": "Kubernetes pod related scnarios to practice for CKAD",
+  "details": {
+    "intro": {
+      "text": "start.md"
+    },
+    "steps": [
+      {
+        "title": "Create a pod",
+        "text": "text.md",
+        "verify": "verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
