@@ -1,6 +1,6 @@
 ### create a pod named `my-pod` with `image=nginx:alpine`.
 
 <details>
-  <summary>Solution</solution>
+  <summary>Solution</summary>
   kubectl run my-pod --image=nginx:alpine
 </details>
