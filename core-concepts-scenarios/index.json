@@ -10,6 +10,11 @@
         "title": "Create a pod",
         "text": "step-1/text.md",
         "verify": "step-1/verify.sh"
+      },
+      {
+        "title": "get env",
+        "text": "step-2/text.md",
+        "verify": "step-2/verify.sh"
       }
     ],
     "finish": {
