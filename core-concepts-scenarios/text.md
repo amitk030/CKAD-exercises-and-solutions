@@ -5,7 +5,7 @@
 
 ```bash
 kubectl create namespace cygnus
-kubectl run alpha --image=nginx --restart=Never -n mynamespace
+kubectl run alpha --image=nginx --restart=Never -n cygnus
 ```
 
 </p>
