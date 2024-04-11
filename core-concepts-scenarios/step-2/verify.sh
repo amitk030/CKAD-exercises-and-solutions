@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAMESPACE="cygnus"
+NAMESPACE="default"
 POD_NAME="beta"
 EXPECTED_IMAGE="nginx"
 
