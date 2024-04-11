@@ -1,5 +1,5 @@
 {
-  "title": "Core Concept Pods",
+  "title": "Core Concept 1",
   "description": "Kubernetes pod related scnarios to practice for CKAD",
   "details": {
     "intro": {
@@ -8,8 +8,8 @@
     "steps": [
       {
         "title": "Create a pod",
-        "text": "text.md",
-        "verify": "verify.sh"
+        "text": "step-1/text.md",
+        "verify": "step-1/verify.sh"
       }
     ],
     "finish": {
