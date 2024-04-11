@@ -4,7 +4,13 @@
 <p>
 
 ```bash
-k run beta --image=nginx -ti -- env > beta-env.txt
+k run beta --image=nginx
+
+# after checking the pod started running successfully
+k get po
+
+# write env to the file
+k exec beta -ti -- env > beta-env.txt
 ```
 
 </p>
