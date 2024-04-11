@@ -14,3 +14,20 @@
       </p>
       </details>
 
+1.  ### create a pod with name `theta` and image `busybox` and write `env` variables of that pod to file `theta-env.txt`
+
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      kubectl run theta --image=busybox
+      kubectl exec theta -ti -- env > theta-env.txt
+      ```
+      -- OR --
+
+      ```bash
+      kubectl run theta --image=busybox -ti -- env # this will print env variables copy and paste it to theta-env.txt
+      ```
+
+      </p>
+      </details>
