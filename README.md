@@ -13,3 +13,7 @@ Here are a set of exercise for the preparation of [CKAD certification exam offer
 - [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/) using API
 
 - [Use Port Forwarding to Access Applications in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+
+## Few Tips And Tricks
+
+- [Configure your Environment](./tips_and_tricks.md)
