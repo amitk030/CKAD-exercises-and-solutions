@@ -1,9 +1,14 @@
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+
 ### CKAD Exercises
 ---
 
 Here are a set of exercise for the preparation of [CKAD certification exam offered by The Linux Foundation](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/) feel free go through them. Each exercise have some useful links about them. You can either perform these exercises on your on [minikube](https://minikube.sigs.k8s.io/docs/start/) or any other multinode kubernetes setup you have or you can also go through them in KillerCoda env, having same setup as the CKAD exam.
 
-Along with these textual questionaries. [Here are free simulated exercises in KillerCoda](https://killercoda.com/amitk)
+Along with these textual questionaries. <a href="https://killercoda.com/amitk" target="_blank">Here are free simulated exercises in KillerCoda</a>
+
 ## Topics
 
 
@@ -23,4 +28,4 @@ Open For PR? Fixing an error/Providing alternative way to solve/Adding an extra 
 
 If you were able to learn anything for this Repo. Please, feel free to buy me a coffee.
 
-<a href="https://www.buymeacoffee.com/amkumar030k" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="44" width="175"></a>
+<a href="https://www.buymeacoffee.com/amkumar030k" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="50" width="200"></a>
