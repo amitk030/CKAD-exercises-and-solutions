@@ -9,10 +9,37 @@ Here are a set of exercise for the preparation of [CKAD certification exam offer
 
 Along with these textual questionaries. <a href="https://killercoda.com/amitk" target="_blank">Here are free simulated exercises in KillerCoda</a>
 
-## Topics
+## Topics(in progress....)
 
-
-
+- [Pods](./practice-challenges/pods)
+- Label, selectors and Annotations
+- Replica Sets
+- Environment Variables
+- Config Maps
+- Secrets
+- Security Context
+- Service Account
+- Resources Quota
+- Resources Limit and Ranges
+- Resource Requests
+- Node Selector
+- Taints and Tolarations
+- Node Affinity
+- Multi-container Pods
+- Init Containers
+- Liveness and Readiness Probe
+- Container Logging
+- Deployments
+- Deployment types(Rolling Update, Blue Green, Canary)
+- services
+- Ingress
+- Network Policies
+- Volume Persistence
+- Role Based Access Control (RBAC)
+- Jobs
+- CronJobs
+- Custom Resource Definition
+- Helm fundamentals
 
 
 ## Useful Docs And Tips
