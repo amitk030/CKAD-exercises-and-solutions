@@ -1,5 +1,6 @@
 {
   "items": [
-    { "path": "pods"}
+    { "path": "pods"},
+    { "path": "labels and selectors"}
   ]
 }
