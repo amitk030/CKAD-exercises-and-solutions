@@ -1,0 +1,81 @@
+# Replica Sets
+
+[Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+</br>
+[Tips and Tricks](../../tips_and_tricks.md)
+
+##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
+
+1.  ### name a pod `sumo` with image `nginx` and label it `tier=one`
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      k run sumo --image=nginx --labels=tier=frontend
+      ```
+
+      </p>
+    </details>
+
+1.  ### create 3 pods named `one`, `two` and `three` with image `nginx:alpine` and label them `resource=alpha`, `resource=beta` and `resource=gama` respectively.
+    
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      k run one --image=nginx:alpine --labels=resource=alpha
+
+      k run two --image=nginx:alpine --labels=resource=beta
+
+      k run three --image=nginx:alpine --labels=resource=gama
+      ```
+
+      </p>
+    </details>
+
+1.  ### Add label `tier=backend` to pods `one`,`two` and `three`
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      k labels pod one two three tier=backend
+      ```
+
+      </p>
+    </details>
+
+1.  ### Add label `app_version=v1` to pods having labels `tier=frontend` or `tier=backend`.
+
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      k labels pod -l "tier in (frontend,backend)" app_version=v1
+      ```
+
+      </p>
+    </details>
+
+1. ### Update label `app_version=v2` on pod `two`
+
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      k labels pod two app_version=v2 --overwrite
+      ```
+
+      </p>
+    </details>
+
+1. ### Remove label `app_version=v1` on pod `one`
+
+    <details><summary>Solution</summary>
+      <p>
+
+      ```bash
+      k labels pod one app_version=v1-
+      ```
+
+      </p>
+    </details>

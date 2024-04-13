@@ -5,14 +5,14 @@
 ### CKAD Exercises
 ---
 
-Here are a set of exercise for the preparation of [CKAD certification exam offered by The Linux Foundation](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/) feel free go through them. Each exercise have some useful links about them. You can either perform these exercises on your own, on [minikube](https://minikube.sigs.k8s.io/docs/start/) or any other multinode kubernetes setup you have or you can also go through them in KillerCoda env, having same setup as the CKAD exam.
+Here are a set of exercise for learning Kubernetes and preparing for [CKAD certification exam offered by The Linux Foundation](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/) feel free to go through them. Each exercise have some useful links about them. You can either perform these exercises on your own, on [minikube](https://minikube.sigs.k8s.io/docs/start/) or any other multinode kubernetes setup you have or you can also go through them in KillerCoda env, having same setup as the CKAD exam.
 
 Along with these textual questionaries. <a href="https://killercoda.com/amitk" target="_blank">Here are free simulated exercises in KillerCoda</a>
 
 ## Topics(in progress....)
 
 - [Pods](./practice-challenges/pods)
-- Label, selectors and Annotations
+- [Label and selectors](./practice-challenges/Labels%20and%20Selectors/)
 - Replica Sets
 - Environment Variables
 - Config Maps

@@ -1,10 +1,10 @@
 # Practice Problems Pods
 
-[Read about pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+[Read more about Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
 </br>
 [Tips and Tricks](../../tips_and_tricks.md)
-### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
-### 
+
+##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
 
 1. ### create `cygnus` namespace.
 
