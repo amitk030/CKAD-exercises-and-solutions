@@ -1,15 +1,11 @@
 ### name a pod `sumo` with image `nginx` and label it `tier=frontend`
     
   <details><summary>Solution</summary>
-    <p>
 
-    ```bash
     k run sumo --image=nginx --labels=tier=frontend
-    ```
 
-    --OR--
+    ---
 
-    ```bash
     # update metadata of pod yaml
     apiVersion: v1
     kind: Pod
@@ -26,7 +22,5 @@
       dnsPolicy: ClusterFirst
       restartPolicy: Always
     status: {}
-    ```
 
-    </p>
   </details>
