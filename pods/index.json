@@ -1,6 +1,6 @@
 {
   "title": "Pods",
-  "description": "Learn about pods and Namespaces",
+  "description": "Exercises on pods and Namespaces",
   "details": {
     "intro": {
       "text": "start.md"
