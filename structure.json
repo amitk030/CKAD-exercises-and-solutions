@@ -1,5 +1,6 @@
 {
   "items": [
-    { "path": "./scenarios/pods" }
+    { "path": "scenario2" },
+    { "path": "scenario1" }
   ]
 }
