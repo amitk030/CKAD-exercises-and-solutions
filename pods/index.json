@@ -1,6 +1,6 @@
 {
   "title": "Pods",
-  "description": "Simulated pod related scnarios",
+  "description": "Learn about pods and Namespaces",
   "details": {
     "intro": {
       "text": "start.md"
