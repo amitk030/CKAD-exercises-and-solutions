@@ -1,4 +1,3 @@
-![](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises/core_concepts&empty)
 # Core Concepts [pods, namespaces, Replica Sets, Deployments]
 
 

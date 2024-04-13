@@ -1,6 +1,6 @@
 {
-  "title": "Core Concept 1",
-  "description": "Kubernetes pod related scnarios to practice for CKAD",
+  "title": "Pods",
+  "description": "Simulated pod related scnarios",
   "details": {
     "intro": {
       "text": "start.md"
