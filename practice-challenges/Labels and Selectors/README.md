@@ -59,7 +59,7 @@
       <p>
 
       ```bash
-      k labels pod one two three tier=backend
+      k label pod one two three tier=backend
       ```
 
       </p>
@@ -71,7 +71,7 @@
       <p>
 
       ```bash
-      k labels pod -l "tier in (frontend,backend)" app_version=v1
+      k label pod -l "tier in (frontend,backend)" app_version=v1
       ```
 
       </p>
@@ -83,7 +83,7 @@
       <p>
 
       ```bash
-      k labels pod two app_version=v2 --overwrite
+      k label pod two app_version=v2 --overwrite
       ```
 
       </p>
@@ -95,7 +95,7 @@
       <p>
 
       ```bash
-      k labels pod one app_version=v1-
+      k label pod one app_version=v1-
       ```
 
       </p>
