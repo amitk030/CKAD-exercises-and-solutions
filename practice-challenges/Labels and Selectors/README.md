@@ -35,6 +35,10 @@
       status: {}
       ```
 
+      verify labels on pods running
+      ```bash
+        k get po --show-labels
+      ```
       </p>
     </details>
 
