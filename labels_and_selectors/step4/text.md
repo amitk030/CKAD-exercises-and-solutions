@@ -3,9 +3,9 @@
 <details><summary>Solution</summary>
   <p>
 
-    ```bash
-      k label pod -l "tier in (frontend,backend)" app_version=v1
-    ```
+  ```bash
+  k label pod -l "tier in (frontend,backend)" app_version=v1
+  ```
 
   </p>
 </details>
