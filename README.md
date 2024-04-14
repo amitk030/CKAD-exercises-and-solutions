@@ -11,9 +11,9 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 
 ## Topics(in progress....)
 
-- [Pods](./practice-challenges/pods)
-- [Label and selectors](./practice-challenges/Labels%20and%20Selectors/)
-- Replica Sets
+- [Pods](./practice-challenges/pods/README.md)
+- [Label and selectors](./practice-challenges/Labels%20and%20Selectors/README.md)
+- [Replica Sets](./practice-challenges/replicaSets/README.md)
 - Environment Variables
 - Config Maps
 - Secrets

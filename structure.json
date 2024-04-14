@@ -1,6 +1,7 @@
 {
   "items": [
     { "path": "pods"},
-    { "path": "labels_and_selectors"}
+    { "path": "labels_and_selectors"},
+    { "path": "replica_sets" }
   ]
 }
