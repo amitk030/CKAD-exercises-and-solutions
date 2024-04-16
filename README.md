@@ -14,11 +14,11 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Pods](./practice-challenges/pods/README.md)
 - [Label and selectors](./practice-challenges/Labels%20and%20Selectors/README.md)
 - [Replica Sets](./practice-challenges/replicaSets/README.md)
-- Environment Variables
+- [Environment Variables](./practice-challenges/Environment%20Variables/README.md)
 - Config Maps
+- Service Account
 - Secrets
 - Security Context
-- Service Account
 - Resources Quota
 - Resources Limit and Ranges
 - Resource Requests
