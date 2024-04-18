@@ -1,7 +1,6 @@
 #!/bin/bash
 
 PV_NAME="pv-1808"
-NAMESPACE="ns-1808"
 
 EXPECTED_STORAGECLASS=""
 EXPECTED_CAPACITY="1Gi"
@@ -11,21 +10,20 @@ EXPECTED_HOST_PATH="/data"
 
 check_pv() {
     local pv_name="$1"
-    local namespace="$2"
-    local expected_storageclass="$3"
-    local expected_capacity="$4"
-    local expected_volume_mode="$5"
-    local expected_access_mode="$6"
-    local expected_host_path="$7"
+    local expected_storageclass="$2"
+    local expected_capacity="$3"
+    local expected_volume_mode="$4"
+    local expected_access_mode="$5"
+    local expected_host_path="$6"
 
-    if kubectl get pv "$pv_name" -n "$namespace" &> /dev/null; then
-        echo "PersistentVolume '$pv_name' exists in namespace '$namespace'."
+    if kubectl get pv "$pv_name" &> /dev/null; then
+        echo "PersistentVolume '$pv_name' exists."
 
-        local actual_storageclass=$(kubectl get pv "$pv_name" -n "$namespace" -o jsonpath='{.spec.storageClassName}')
-        local actual_capacity=$(kubectl get pv "$pv_name" -n "$namespace" -o jsonpath='{.spec.capacity.storage}')
-        local actual_volume_mode=$(kubectl get pv "$pv_name" -n "$namespace" -o jsonpath='{.spec.volumeMode}')
-        local actual_access_mode=$(kubectl get pv "$pv_name" -n "$namespace" -o jsonpath='{.spec.accessModes[0]}')
-        local actual_host_path=$(kubectl get pv "$pv_name" -n "$namespace" -o jsonpath='{.spec.hostPath.path}')
+        local actual_storageclass=$(kubectl get pv "$pv_name"  -o jsonpath='{.spec.storageClassName}')
+        local actual_capacity=$(kubectl get pv "$pv_name"  -o jsonpath='{.spec.capacity.storage}')
+        local actual_volume_mode=$(kubectl get pv "$pv_name"  -o jsonpath='{.spec.volumeMode}')
+        local actual_access_mode=$(kubectl get pv "$pv_name"  -o jsonpath='{.spec.accessModes[0]}')
+        local actual_host_path=$(kubectl get pv "$pv_name"  -o jsonpath='{.spec.hostPath.path}')
 
         if [ "$actual_storageclass" != "$expected_storageclass" ]; then
             echo "Error: PersistentVolume '$pv_name' has incorrect storageClassName. Expected: $expected_storageclass, Actual: $actual_storageclass."
@@ -60,4 +58,4 @@ check_pv() {
     fi
 }
 
-check_pv "$PV_NAME" "$NAMESPACE" "$EXPECTED_STORAGECLASS" "$EXPECTED_CAPACITY" "$EXPECTED_VOLUME_MODE" "$EXPECTED_ACCESS_MODE" "$EXPECTED_HOST_PATH"
+check_pv "$PV_NAME" "$EXPECTED_STORAGECLASS" "$EXPECTED_CAPACITY" "$EXPECTED_VOLUME_MODE" "$EXPECTED_ACCESS_MODE" "$EXPECTED_HOST_PATH"
