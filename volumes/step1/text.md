@@ -1,0 +1,40 @@
+### Create a persistent Volume name `pv-1808` in namespace `ns-1808` with the following details:
+  - storageClassName: ""
+  - capacity.storage: 1Gi
+  - volumeModes: FileSystem
+  - accessModes: ReadWriteMany
+  - hostPath: /data
+
+<details><summary>Solution</summary>
+  <p>
+
+  ```bash
+  # check for ns-1808 namespace
+  k get ns
+  # if it does not exist create it
+  k create ns ns-1808
+
+  # create pv.yaml
+  apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: pv-1808
+    namespace: ns-1808
+  spec:
+    capacity:
+      storage: 1Gi
+    volumeMode: Filesystem
+    accessModes:
+      - ReadWriteMany
+    persistentVolumeReclaimPolicy: Recycle
+    storageClassName: ""
+    hostPath:
+      path: /data
+
+
+  # create persistent volume
+  k create -f pv.yaml
+  ```
+
+  </p>
+</details>

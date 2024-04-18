@@ -15,6 +15,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Label and selectors](./practice-challenges/Labels%20and%20Selectors/README.md)
 - [Replica Sets](./practice-challenges/replicaSets/README.md)
 - [Environment Variables](./practice-challenges/Environment%20Variables/README.md)
+- [Volumes(Persistent Volume and Persistent Volume Claim)](./practice-challenges/Volumes/README.md)
 - Config Maps
 - Service Account
 - Secrets
@@ -34,7 +35,6 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - services
 - Ingress
 - Network Policies
-- Volume Persistence
 - Role Based Access Control (RBAC)
 - Jobs
 - CronJobs

@@ -3,6 +3,7 @@
     { "path": "pods"},
     { "path": "labels_and_selectors"},
     { "path": "replica_sets" },
-    { "path": "environment_variables"}
+    { "path": "environment_variables"},
+    { "path": "volumes"}
   ]
 }
