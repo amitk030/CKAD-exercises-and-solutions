@@ -56,6 +56,12 @@
       <p>
 
       ```bash
+      # check for the ns-1808 namespace
+      k get ns
+
+      # create if it does not exist
+      k create ns ns-1808
+
       # create pvc.yaml
       apiVersion: v1
       kind: PersistentVolumeClaim
