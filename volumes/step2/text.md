@@ -1,7 +1,7 @@
 ### Create a persistent Volume claim name `pvc-1808` in namespace `ns-1808`, binding to `pv-1808` with the following details:
   - storageClassName: ""
   - capacity.storage: 1Gi
-  - volumeModes: FileSystem
+  - volumeModes: Filesystem
   - accessModes: ReadWriteMany
 
 

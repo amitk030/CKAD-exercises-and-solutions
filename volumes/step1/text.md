@@ -1,7 +1,7 @@
 ### Create a persistent Volume name `pv-1808` with the following details:
   - storageClassName: ""
   - capacity.storage: 1Gi
-  - volumeModes: FileSystem
+  - volumeModes: Filesystem
   - accessModes: ReadWriteMany
   - hostPath: /data
 

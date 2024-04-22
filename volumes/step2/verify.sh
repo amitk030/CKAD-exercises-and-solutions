@@ -51,7 +51,7 @@ check_pvc() {
             exit 1
         fi
 
-        echo "PersistentVolumeClaim '$pvc_name' has the expected details and is bound to the PersistentVolume '$PV_NAME'."
+        echo "PersistentVolumeClaim '$pvc_name' has the expected details and is binded to the PersistentVolume '$PV_NAME'."
         exit 0
     else
         echo "Error: PersistentVolumeClaim '$pvc_name' does not exist in namespace '$namespace'."
