@@ -1,4 +1,4 @@
-### Create a persistent Volume name `pv-1808` in namespace `ns-1808` with the following details:
+### Create a persistent Volume name `pv-1808` with the following details:
   - storageClassName: ""
   - capacity.storage: 1Gi
   - volumeModes: FileSystem
@@ -15,7 +15,6 @@
   kind: PersistentVolume
   metadata:
     name: pv-1808
-    namespace: ns-1808
   spec:
     capacity:
       storage: 1Gi
