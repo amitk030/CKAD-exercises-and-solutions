@@ -29,7 +29,7 @@
     containers:
     - image: nginx:alpine
       name: pd-1808
-      command: ["sh","-c","echo 'It feels awsome to prepare for CKAD' > /tedi/author.txt"]
+      command: ["sh","-c","echo 'It feels awesome to prepare for CKAD' > /tedi/author.txt"]
       volumeMounts:
         - name: mydata
           mountPath: /tedi

@@ -45,12 +45,12 @@ check_pod() {
             exit 1
         fi
 
-        cat "/data/author.txt" | grep -q "$expected_content"
+        kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.containers[0].command[*]}' | grep -q "echo 'It feels awesome to prepare for CKAD' > /tedi/author.txt"
         if [ $? -eq 0 ]; then
-            echo "File 'author.txt' with expected content is found in pod '$pod_name'."
+            echo "Command 'echo 'It feels awesome to prepare for CKAD' > /tedi/author.txt' is found in pod '$pod_name'."
             exit 0
         else
-            echo "Error: File 'author.txt' with expected content is not found in pod '$pod_name'."
+            echo "Error: Command 'echo 'It feels awesome to prepare for CKAD' > /tedi/author.txt' is not found in pod '$pod_name'."
             exit 1
         fi
     else
