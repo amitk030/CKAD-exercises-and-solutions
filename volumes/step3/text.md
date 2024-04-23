@@ -1,4 +1,6 @@
-### Run pod `pd-1808` with image `nginx:alpine` in namespace `ns-1808` mounting pvc `pvc-1808` as volume named `mydata` at mount path `/tedi`, run a command `echo "It feels awsome to prepare for CKAD" > /tedi/author.txt`.
+### Run pod `pd-1808` with image `nginx:alpine` in namespace `ns-1808` mounting pvc `pvc-1808` as volume named `mydata` at mount path `/tedi`, run a command `echo "It feels awsome to prepare for CKAD" > /tedi/author.txt`. And it should run on `controlplane` node
+
+  - check nodeName: controlplane
 
 <details><summary>Solution</summary>
   <p>
@@ -19,6 +21,7 @@
     name: pd-1808
     namespace: ns-1808
   spec:
+    nodeName: controlplane
     volumes:
       - name: mydata
         persistentVolumeClaim:

@@ -5,7 +5,8 @@ NAMESPACE="ns-1808"
 EXPECTED_IMAGE="nginx:alpine"
 EXPECTED_VOLUME_NAME="mydata"
 EXPECTED_MOUNT_PATH="/tedi"
-EXPECTED_COMMAND="echo 'It feels awesome to prepare for CKAD' > /tedi/author.txt"
+EXPECTED_CONTENT="It feels awesome to prepare for CKAD"
+EXPECTED_NODE="controlplane"
 
 check_pod() {
     local pod_name="$1"
@@ -13,7 +14,8 @@ check_pod() {
     local expected_image="$3"
     local expected_volume_name="$4"
     local expected_mount_path="$5"
-    local expected_command="$6"
+    local expected_content="$6"
+    local expected_node="$7"
 
     if kubectl get pod "$pod_name" -n "$namespace" &> /dev/null; then
         echo "Pod '$pod_name' exists in namespace '$namespace'."
@@ -21,6 +23,7 @@ check_pod() {
         local actual_image=$(kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.containers[0].image}')
         local actual_volume_name=$(kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.volumes[0].name}')
         local actual_mount_path=$(kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.containers[0].volumeMounts[0].mountPath}')
+        local actual_node=$(kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.nodeName}')
 
         if [ "$actual_image" != "$expected_image" ]; then
             echo "Error: Pod '$pod_name' has incorrect image. Expected: $expected_image, Actual: $actual_image."
@@ -37,12 +40,17 @@ check_pod() {
             exit 1
         fi
 
-        kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.containers[0].command[*]}' | grep -q "$expected_command"
+        if [ "$actual_node" != "$expected_node" ]; then
+            echo "Error: Pod '$pod_name' is not scheduled on node '$expected_node'."
+            exit 1
+        fi
+
+        cat "/data/author.txt" | grep -q "$expected_content"
         if [ $? -eq 0 ]; then
-            echo "Command '$expected_command' is found in pod '$pod_name'."
+            echo "File 'author.txt' with expected content is found in pod '$pod_name'."
             exit 0
         else
-            echo "Error: Command '$expected_command' is not found in pod '$pod_name'."
+            echo "Error: File 'author.txt' with expected content is not found in pod '$pod_name'."
             exit 1
         fi
     else
@@ -51,4 +59,4 @@ check_pod() {
     fi
 }
 
-check_pod "$POD_NAME" "$NAMESPACE" "$EXPECTED_IMAGE" "$EXPECTED_VOLUME_NAME" "$EXPECTED_MOUNT_PATH" "$EXPECTED_COMMAND"
+check_pod "$POD_NAME" "$NAMESPACE" "$EXPECTED_IMAGE" "$EXPECTED_VOLUME_NAME" "$EXPECTED_MOUNT_PATH" "$EXPECTED_CONTENT" "$EXPECTED_NODE"
