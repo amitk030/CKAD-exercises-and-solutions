@@ -15,9 +15,9 @@ if kubectl get configmap "$CONFIG_MAP_NAME" -n "$NAMESPACE" &> /dev/null; then
         if kubectl get pod "$POD_NAME" -n "$NAMESPACE" &> /dev/null; then
             echo "Pod '$POD_NAME' exists in namespace '$NAMESPACE'."
             
-            ACTUAL_ENV_VALUE=$(kubectl get pod "$POD_NAME" -n "$NAMESPACE" -o jsonpath="{.spec.containers[0].env[?(@.name=='power')].value}")
+            ACTUAL_ENV_KEY=$(kubectl get pod aries -o jsonpath="{.spec.containers[0].env[?(@.name=='power')].valueFrom.configMapKeyRef.key}")
             
-            if [ "$ACTUAL_ENV_VALUE" = "$EXPECTED_VALUE" ]; then
+            if [ "$ACTUAL_ENV_KEY" = "$EXPECTED_KEY" ]; then
                 echo "Environment variable 'power' in pod '$POD_NAME' has the expected value '$EXPECTED_VALUE'."
                 exit 0
             else

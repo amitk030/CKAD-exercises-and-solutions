@@ -30,7 +30,7 @@
       <p>
 
       ```bash
-      k create configmap myconfig --from-file=userdetails=user.txt
+      k create configmap fileconfig --from-file=userdetails=user.txt
       ```
 
       </p>
