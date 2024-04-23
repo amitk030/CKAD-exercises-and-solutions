@@ -16,7 +16,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Replica Sets](./practice-challenges/replicaSets/README.md)
 - [Environment Variables](./practice-challenges/Environment%20Variables/README.md)
 - [Volumes(Persistent Volume and Persistent Volume Claim)](./practice-challenges/Volumes/README.md)
-- Config Maps
+- [Config Maps](./practice-challenges/Config%20Maps/README.md)
 - Service Account
 - Secrets
 - Security Context

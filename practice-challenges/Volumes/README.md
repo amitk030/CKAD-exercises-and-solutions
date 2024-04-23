@@ -96,10 +96,10 @@
       <p>
 
       ```bash
-      export do="--dry-run=client -o yaml"
+      export dr="--dry-run=client -o yaml"
 
       # generate pod.yaml
-      k run pd-1808 --image=nginx:alpine $do > pod.yaml
+      k run pd-1808 --image=nginx:alpine $dr > pod.yaml
 
       # update pod.yaml
       apiVersion: v1
@@ -223,7 +223,7 @@
       export do="--dry-run=client -o yaml"
 
       # generate pod.yaml
-      k run rare --image=nginx:alpine $do > pod.yaml
+      k run rare --image=nginx:alpine $dr > pod.yaml
 
       # update pod.yaml
       apiVersion: v1

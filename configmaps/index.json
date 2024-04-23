@@ -1,0 +1,38 @@
+{
+  "title": "Config Map",
+  "description": "create and config maps to pods",
+  "details": {
+    "intro": {
+      "text": "start.md"
+    },
+    "steps": [
+      {
+        "title": "Create a configmap",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Create a configmap from a file",
+        "background": "step2/background.sh",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Set env variable from a configmap",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Mount a configmap as a volume",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

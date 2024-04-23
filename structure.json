@@ -4,6 +4,7 @@
     { "path": "labels_and_selectors"},
     { "path": "replica_sets" },
     { "path": "environment_variables"},
-    { "path": "volumes"}
+    { "path": "volumes"},
+    { "path": "configmaps"}
   ]
 }
