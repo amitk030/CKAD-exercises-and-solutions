@@ -1,6 +1,6 @@
 {
   "title": "Config Map",
-  "description": "create and config maps to pods",
+  "description": "create and manage config maps and pods",
   "details": {
     "intro": {
       "text": "start.md"
