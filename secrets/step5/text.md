@@ -22,7 +22,7 @@
   spec:
     volumes:
       - name: secret-vol
-        secert:
+        secret:
           secretName: dotfile-secret
     containers:
     - image: nginx

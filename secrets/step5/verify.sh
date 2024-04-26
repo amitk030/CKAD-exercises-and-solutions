@@ -1,9 +1,9 @@
 #!/bin/bash
 
-NAMESPACE="your_namespace_here"
+NAMESPACE="default"
 SECRET_NAME="dotfile-secret"
 POD_NAME="keeper"
-EXPECTED_VALUE="hidden=value"
+EXPECTED_VALUE="value"
 EXPECTED_MOUNT_PATH="/etc/secret"
 
 if kubectl get secret "$SECRET_NAME" -n "$NAMESPACE" &> /dev/null; then
@@ -17,7 +17,7 @@ if kubectl get secret "$SECRET_NAME" -n "$NAMESPACE" &> /dev/null; then
         if kubectl get pod "$POD_NAME" -n "$NAMESPACE" &> /dev/null; then
             echo "Pod '$POD_NAME' exists in namespace '$NAMESPACE'."
 
-            MOUNTED=$(kubectl get pod "$POD_NAME" -n "$NAMESPACE" -o jsonpath="{.spec.volumes[?(@.name=='secret-vol')].mountPath}")
+            MOUNTED=$(kubectl get pod keeper -o jsonpath="{.spec.containers[0].volumeMounts[?(@.name=='secret-vol')].mountPath}")
 
             if [ "$MOUNTED" = "$EXPECTED_MOUNT_PATH" ]; then
                 echo "Secret '$SECRET_NAME' is mounted at the expected path '$EXPECTED_MOUNT_PATH' in pod '$POD_NAME'."
