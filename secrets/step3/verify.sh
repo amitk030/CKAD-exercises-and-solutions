@@ -20,7 +20,7 @@ if kubectl get pod "$POD_NAME" -n "$NAMESPACE" &> /dev/null; then
         MYSQL_USER=$(kubectl get secret "$SECRET_NAME" -n "$NAMESPACE" -o jsonpath="{.data.MYSQL_USER}" | base64 --decode)
         MYSQL_PASSWORD=$(kubectl get secret "$SECRET_NAME" -n "$NAMESPACE" -o jsonpath="{.data.MYSQL_PASSWORD}" | base64 --decode)
         MYSQL_DATABASE=$(kubectl get secret "$SECRET_NAME" -n "$NAMESPACE" -o jsonpath="{.data.MYSQL_DATABASE}" | base64 --decode)
-        exist 0
+        exit 0
     else
         echo "Error: Secret '$SECRET_NAME' does not exist in namespace '$NAMESPACE'."
         exit 1
