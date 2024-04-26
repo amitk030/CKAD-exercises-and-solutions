@@ -17,8 +17,8 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Environment Variables](./practice-challenges/Environment%20Variables/README.md)
 - [Volumes(Persistent Volume and Persistent Volume Claim)](./practice-challenges/Volumes/README.md)
 - [Config Maps](./practice-challenges/Config%20Maps/README.md)
-- Service Account
-- Secrets
+- [Secrets](./practice-challenges/Secrets/README.md)
+- [Service Account](./practice-challenges/Service%20Account/README.md)
 - Security Context
 - Resources Quota
 - Resources Limit and Ranges

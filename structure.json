@@ -5,6 +5,7 @@
     { "path": "replica_sets" },
     { "path": "environment_variables"},
     { "path": "volumes"},
-    { "path": "configmaps"}
+    { "path": "configmaps"},
+    { "path": "secrets"}
   ]
 }
