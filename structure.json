@@ -6,6 +6,7 @@
     { "path": "environment_variables"},
     { "path": "volumes"},
     { "path": "configmaps"},
-    { "path": "secrets"}
+    { "path": "secrets"},
+    { "path": "security_context"}
   ]
 }
