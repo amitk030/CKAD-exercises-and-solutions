@@ -19,12 +19,12 @@ if kubectl get pod "$POD_NAME" -n "$NAMESPACE" &> /dev/null; then
         if [ "$ACTUAL_GROUP_ID" = "$EXPECTED_GROUP_ID" ]; then
             echo "Security context group ID in pod '$POD_NAME' matches the expected group ID: '$EXPECTED_GROUP_ID'."
 
-          kubectl get pod "$pod_name" -n "$namespace" -o jsonpath='{.spec.containers[0].command[*]}' | grep -q "sleep 3600"
+          kubectl get pod "$POD_NAME" -n "$NAMESPACE" -o jsonpath='{.spec.containers[0].command[*]}' | grep -q "sleep 3600"
           if [ $? -eq 0 ]; then
-              echo "Command sleep 3600 is found in pod '$pod_name'."
+              echo "Command sleep 3600 is found in pod '$POD_NAME'."
               exit 0
           else
-              echo "Error: Command sleep 3600 is not found in pod '$pod_name'."
+              echo "Error: Command sleep 3600 is not found in pod '$POD_NAME'."
               exit 1
           fi
         else
