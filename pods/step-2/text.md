@@ -1,4 +1,4 @@
-### create pod `beta` and image `nginx` and store it's `env` in `beta-env.txt` file.
+### create pod `beta` and image `nginx` and store it's `env` in `beta-env.txt` file in `default` namespace.
 
 <details><summary>Solution</summary>
 <p>
