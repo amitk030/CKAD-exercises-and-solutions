@@ -8,6 +8,8 @@
 - name: MYSQL_DATABASE
   value: "mydatabase"
 
+### use this secret as environment variables from `db` pod.
+
 <details><summary>Solution</summary>
   <p>
 
