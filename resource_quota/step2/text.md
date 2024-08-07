@@ -1,6 +1,8 @@
 ### Try creating a pod `server` with `nginx` image in `demo` namespace with resources request of `cpu=1.5` and `memory=1Gi` & limits of `cpu=2`, `memory=2Gi`. The pod creation will fail.
 ### Now update the pod to request `cpu=0.5`. Now the pod will be created successfully. 
 
+** to check wait for pod to be in the running state
+
 <details><summary>Solution</summary>
 <p>
 
