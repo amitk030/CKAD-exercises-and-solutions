@@ -20,7 +20,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Secrets](./practice-challenges/Secrets/README.md)
 - [Service Account](./practice-challenges/Service%20Account/README.md)
 - [Security Context](./practice-challenges/Security%20Context/README.md)
-- Resources Quota
+- [Resources Quota](./practice-challenges/Resource%20Quota/README.md)
 - Resources Limit and Ranges
 - Resource Requests
 - Node Selector
