@@ -1,11 +1,11 @@
-### Try creating a pod `server` with `nginx` image in `demo` namespace with resources request of `cpu=2.1` and `memory=2.5Gi`. The pod creation will fail. Check it's status by running `k describe po server -n demo`.
+## Modify `server` pod with resources request of `cpu=1` and `memory=1Gi`. You can delete and create the pod again. Check, now the pod will start running.
 
 <details><summary>Solution</summary>
 <p>
 
 ```bash
-# create the server pod
-k run server --image=nginx --dry-run=client -o yaml > pod.yaml
+# delete the pod if it exists.
+k delete po server --force
 
 # update resources request and limits in the pod
       apiVersion: v1
@@ -15,15 +15,14 @@ k run server --image=nginx --dry-run=client -o yaml > pod.yaml
         labels:
           run: server
         name: server
-        namespace: demo
       spec:
         containers:
         - image: nginx
           name: server
           resources:
             requests:
-              cpu: "2.1"
-              memory: 2.5Gi
+              cpu: "1"
+              memory: 1Gi
         dnsPolicy: ClusterFirst
         restartPolicy: Always
 ```
