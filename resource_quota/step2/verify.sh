@@ -33,24 +33,24 @@ verify_pod_resources() {
     fi
 }
 
-verify_pod_creation_failure() {
+verify_pod_creation() {
     local namespace="$1"
     local pod_name="$2"
 
     status=$(kubectl get pod "$pod_name" -n "$namespace" -o json | jq -r '.status.phase')
 
-    if [[ "$status" == "Pending" || "$status" == "Failed" ]]; then
-        echo "Pod '$pod_name' in namespace '$namespace' failed to start as expected."
+    if [[ "$status" == "Running" ]]; then
+        echo "Pod '$pod_name' in namespace '$namespace' is running as expected."
     else
-        echo "Pod '$pod_name' in namespace '$namespace' is running, but it was expected to fail."
+        echo "Pod '$pod_name' in namespace '$namespace' is failed."
         exit 1
     fi
 }
 
 NAMESPACE="demo"
 POD_NAME="server"
-EXPECTED_CPU="2.1"
-EXPECTED_MEMORY="2.5Gi"
+EXPECTED_CPU="0.5"
+EXPECTED_MEMORY="1Gi"
 
 verify_pod_existence "$NAMESPACE" "$POD_NAME"
 verify_pod_resources "$NAMESPACE" "$POD_NAME" "$EXPECTED_CPU" "$EXPECTED_MEMORY"

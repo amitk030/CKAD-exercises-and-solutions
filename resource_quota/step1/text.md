@@ -8,17 +8,17 @@
 k create ns demo
 
 # create resource quota > quota.yaml
-      apiVersion: v1
-      kind: ResourceQuota
-      metadata:
-        name: demo-quota
-        namespace: demo
-      spec:
-        hard:
-          requests.cpu: "1"
-          requests.memory: 1Gi
-          limits.cpu: "2"
-          limits.memory: 2Gi
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: demo-quota
+  namespace: demo
+spec:
+  hard:
+    requests.cpu: "1"
+    requests.memory: 1Gi
+    limits.cpu: "2"
+    limits.memory: 2Gi
 
 k create -f quota.yaml
 

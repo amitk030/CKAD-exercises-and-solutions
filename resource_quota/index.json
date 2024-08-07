@@ -15,11 +15,6 @@
           "title": "Pod creation with more resources",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
-        },
-        {
-          "title": "Pod creation within limited resources",
-          "text": "step3/text.md",
-          "verify": "step3/verify.sh"
         }
       ],
       "finish": {
