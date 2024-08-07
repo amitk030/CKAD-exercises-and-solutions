@@ -1,0 +1,28 @@
+{
+    "title": "Resource Quota",
+    "description": "Exercises on resource quota",
+    "details": {
+      "intro": {
+        "text": "start.md"
+      },
+      "steps": [
+        {
+          "title": "Create a resource quota",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "get env",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
+  
