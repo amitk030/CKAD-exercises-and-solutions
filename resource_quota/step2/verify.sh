@@ -49,9 +49,9 @@ verify_pod_creation() {
 
 NAMESPACE="demo"
 POD_NAME="server"
-EXPECTED_CPU="0.5"
+EXPECTED_CPU="500m"
 EXPECTED_MEMORY="1Gi"
 
 verify_pod_existence "$NAMESPACE" "$POD_NAME"
 verify_pod_resources "$NAMESPACE" "$POD_NAME" "$EXPECTED_CPU" "$EXPECTED_MEMORY"
-verify_pod_creation_failure "$NAMESPACE" "$POD_NAME"
+verify_pod_creation "$NAMESPACE" "$POD_NAME"

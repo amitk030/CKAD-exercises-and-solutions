@@ -10,16 +10,26 @@ k run server --image=nginx -n demo --dry-run=client -o yaml > pod.yaml
 
 # update resources request and limits in the pod
 apiVersion: v1
-kind: ResourceQuota
+kind: Pod
 metadata:
-  name: demo-quota
+  creationTimestamp: null
+  labels:
+    run: server
+  name: server
   namespace: demo
 spec:
-  hard:
-    requests.cpu: "1.5" # update it to 0.5 in second attempt
-    requests.memory: 1Gi
-    limits.cpu: "2"
-    limits.memory: 2Gi
+  containers:
+  - image: nginx
+    name: server
+    resources:
+      requests:
+        cpu: "1.5" # use 0.5 in the second attempt
+        memory: 1Gi
+      limits:
+        cpu: 2
+        memory: 2Gi
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
 
 # create the pod
 k create -f pod.yaml
