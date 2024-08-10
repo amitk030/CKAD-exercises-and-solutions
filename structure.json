@@ -8,6 +8,7 @@
     { "path": "configmaps"},
     { "path": "secrets"},
     { "path": "security_context"},
-    { "path": "resource_quota"}
+    { "path": "resource_quota"},
+    { "path": "resource_limitrange"}
   ]
 }
