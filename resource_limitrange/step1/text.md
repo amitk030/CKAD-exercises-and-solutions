@@ -12,7 +12,7 @@ apiVersion: v1
 kind: LimitRange
 metadata:
   name: memory-limit
-  namespace: one
+  namespace: pierre
 spec:
   limits:
   - max: # max and min define the limit range

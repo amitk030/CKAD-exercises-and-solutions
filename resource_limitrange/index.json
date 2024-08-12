@@ -12,15 +12,10 @@
         "verify": "step1/verify.sh"
       },
       {
-        "title": "create a pod within, limitrange",
+        "title": "create a pod limitrange, given",
+        "background": "step2/background.sh",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
-      },
-      {
-        "title": "create a pod limitrange, given",
-        "background": "step3/background.sh",
-        "text": "step3/text.md",
-        "verify": "step3/verify.sh"
       }
     ],
     "finish": {
