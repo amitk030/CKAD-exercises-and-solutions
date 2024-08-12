@@ -21,7 +21,7 @@ spec:
   - image: nginx
     name: carpo
     resources:
-      limit:
+      limits:
         memory: 400Mi
   dnsPolicy: ClusterFirst
   restartPolicy: Always
