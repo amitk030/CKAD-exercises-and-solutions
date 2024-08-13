@@ -7,10 +7,13 @@
 # create namespace
 k create ns aarav
 
-# k run atharv --image=nginx -n aarav --dry-run=client -o yaml > quota.yaml
+# k run atharv --image=nginx -n aarav --dry-run=client -o yaml > pod.yaml
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
+  creationTimestamp: null
+  labels:
+    run: atharv
   name: atharv
   namespace: aarav
 spec:
@@ -19,10 +22,11 @@ spec:
     name: atharv
     resources:
       requests:
-        cpu: "400m"
+        cpu: 400m
         memory: 512Mi
   dnsPolicy: ClusterFirst
   restartPolicy: Always
+status: {}
 
 k create -f pod.yaml
 ```

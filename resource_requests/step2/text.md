@@ -7,10 +7,13 @@
 # create namespace
 k create ns omega
 
-# k run serve --image=nginx -n omega --dry-run=client -o yaml > quota.yaml
+# k run serve --image=nginx -n omega --dry-run=client -o yaml > pod.yaml
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
+  creationTimestamp: null
+  labels:
+    run: serve
   name: serve
   namespace: omega
 spec:
@@ -19,13 +22,14 @@ spec:
     name: serve
     resources:
       requests:
-        cpu: "400m"
+        cpu: 400m
         memory: 512Mi
       limits:
         cpu: 1
         memory: 1Gi
   dnsPolicy: ClusterFirst
   restartPolicy: Always
+status: {}
 
 k create -f pod.yaml
 ```
