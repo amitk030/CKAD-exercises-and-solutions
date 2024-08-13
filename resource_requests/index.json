@@ -1,0 +1,27 @@
+{
+  "title": "Resources Request",
+  "description": "Resources requests in each container",
+  "details": {
+    "intro": {
+      "text": "start.md"
+    },
+    "steps": [
+      {
+        "title": "Create a pod with resource requests",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Create a pod with resource requests & limits",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
