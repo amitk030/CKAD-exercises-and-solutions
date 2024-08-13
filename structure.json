@@ -9,6 +9,7 @@
     { "path": "secrets"},
     { "path": "security_context"},
     { "path": "resource_quota"},
-    { "path": "resource_limitrange"}
+    { "path": "resource_limitrange"},
+    { "path": "resource_requests"}
   ]
 }
