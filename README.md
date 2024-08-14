@@ -23,7 +23,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Resources Quota](./practice-challenges/Resource%20Quota/README.md)
 - [Resources Limit and Ranges](./practice-challenges/Resource%20Limit%20Range/README.md)
 - [Resource Requests](./practice-challenges/Resource%20Requests/README.md)
-- Node Selector
+- [Node Selector](./practice-challenges/Node%20Selector/README.md)
 - Taints and Tolarations
 - Node Affinity
 - Multi-container Pods
