@@ -1,6 +1,6 @@
 {
   "title": "Taints & Tolerations",
-  "description": "Add taints to nodes & adding tolerations to pods",
+  "description": "Add taints to nodes & add tolerations to pods",
   "details": {
     "intro": {
       "text": "start.md"
