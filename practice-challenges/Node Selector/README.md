@@ -6,17 +6,17 @@
 
 ##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
 
-1.  ### Add label `name=master` to `controlplane` node. 
+1.  ### Add label `name=master` to `node01` node. 
     <details><summary>Solution</summary>
       <p>
 
       ```bash
-      k label node controlplane name=master
+      k label node node01 name=master
       ```
       </p>
     </details>
 
-1.  ### create a pod named `p1` with `nginx` image. Schedule it on the `controlplane` node using node selector.
+1.  ### create a pod named `p1` with `nginx` image. Schedule it on the `node01` node using node selector.
     
     <details><summary>Solution</summary>
       <p>
@@ -44,7 +44,7 @@
       </p>
     </details>
 
-1.  ### Create a pod named `p2` with image `nginx`. Schedule it on the `controlplane` node using nodeName.
+1.  ### Create a pod named `p2` with image `nginx`. Schedule it on the `node01` node using nodeName.
     <details><summary>Solution</summary>
       <p>
 
@@ -57,7 +57,7 @@
           run: p1
         name: p1
       spec:
-        nodeName: controlplane
+        nodeName: node01
         containers:
         - image: nginx
           name: p1

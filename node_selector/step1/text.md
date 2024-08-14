@@ -1,11 +1,11 @@
-### Add label `name=master` to `controlplane` node. create a pod named `p1` with `nginx` image. Schedule it on the `controlplane` node using node selector.
+### Add label `name=master` to `node01` node. create a pod named `p1` with `nginx` image. Schedule it on the `node01` node using node selector.
 
 <details><summary>Solution</summary>
 <p>
 
 ```bash
 # Add label to node
-k label node controlplane name=master
+k label node node01 name=master
 ```
 
 ```bash

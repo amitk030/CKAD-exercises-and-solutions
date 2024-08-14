@@ -1,4 +1,4 @@
-### Create a pod named `p2` with image `nginx`. Schedule it on the `controlplane` node using nodeName.
+### Create a pod named `p2` with image `nginx`. Schedule it on the `node01` node using nodeName.
 
 <details><summary>Solution</summary>
 <p>
@@ -12,7 +12,7 @@ metadata:
     run: p1
   name: p1
 spec:
-  nodeName: controlplane
+  nodeName: node01
   containers:
   - image: nginx
     name: p1
