@@ -9,13 +9,13 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: p1
-  name: p1
+    run: p2
+  name: p2
 spec:
   nodeName: node01
   containers:
   - image: nginx
-    name: p1
+    name: p2
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
