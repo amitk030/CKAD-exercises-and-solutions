@@ -37,10 +37,10 @@
         name: bouncer
       spec:
         tolerations:
-          key: "reserved"
-          operator: "Equal"
-          value: "space"
-          effect: "NoSchedule"
+          - key: "reserved"
+            operator: "Equal"
+            value: "space"
+            effect: "NoSchedule"
         containers:
         - image: nginx
           name: bouncer

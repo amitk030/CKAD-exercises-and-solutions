@@ -1,6 +1,8 @@
 #!/bin/bash
 
-EXPECTED_TOLERATION="reserved=space:NoSchedule"
+EXPECTED_KEY="reserved"
+EXPECTED_VALUE="space"
+EXPECTED_EFFECT="NoSchedule"
 
 echo "Checking if the pod 'bouncer' is running with the 'nginx' image..."
 POD=$(kubectl get pod bouncer -o jsonpath='{.spec.containers[?(@.image=="nginx")].name}')
@@ -12,14 +14,16 @@ else
     echo "Pod 'bouncer' with 'nginx' image is running."
 fi
 
-echo "Checking if the pod 'bouncer' has the toleration '$EXPECTED_TOLERATION'..."
+echo "Checking if the pod 'bouncer' has the toleration '$EXPECTED_KEY=$EXPECTED_VALUE:$EXPECTED_EFFECT'..."
 
-TOLERATIONS=$(kubectl get pod bouncer -o jsonpath='{.spec.tolerations[*].key}={.spec.tolerations[*].operator}:{.spec.tolerations[*].value}:{.spec.tolerations[*].effect}')
+TOLERATIONS=$(kubectl get pod bouncer -o jsonpath='{.spec.tolerations[*]}')
 
-if echo "$TOLERATIONS" | grep -q "$EXPECTED_TOLERATION"; then
-    echo "Pod 'bouncer' has the expected toleration '$EXPECTED_TOLERATION'."
+if echo "$TOLERATIONS" | grep -q "\"key\":\"$EXPECTED_KEY\"" && \
+   echo "$TOLERATIONS" | grep -q "\"value\":\"$EXPECTED_VALUE\"" && \
+   echo "$TOLERATIONS" | grep -q "\"effect\":\"$EXPECTED_EFFECT\""; then
+    echo "Pod 'bouncer' has the expected toleration '$EXPECTED_KEY=$EXPECTED_VALUE:$EXPECTED_EFFECT'."
 else
-    echo "Toleration '$EXPECTED_TOLERATION' not found on pod 'bouncer'."
+    echo "Toleration '$EXPECTED_KEY=$EXPECTED_VALUE:$EXPECTED_EFFECT' not found on pod 'bouncer'."
     exit 1
 fi
 
