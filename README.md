@@ -24,8 +24,8 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Resources Limit and Ranges](./practice-challenges/Resource%20Limit%20Range/README.md)
 - [Resource Requests](./practice-challenges/Resource%20Requests/README.md)
 - [Node Selector](./practice-challenges/Node%20Selector/README.md)
-- Taints and Tolarations
-- Node Affinity
+- [Taints and Tolarations](./practice-challenges/Taints%20&%20Tolerations/README.md)
+- [Node Affinity](./practice-challenges/Node%20Affinity/README.md)
 - Multi-container Pods
 - Init Containers
 - Liveness and Readiness Probe

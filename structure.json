@@ -12,6 +12,7 @@
     { "path": "resource_limitrange"},
     { "path": "resource_requests"},
     { "path": "node_selector"},
-    { "path": "taint_and_tolerations"}
+    { "path": "taint_and_tolerations"},
+    { "path": "node_affinity"}
   ]
 }
