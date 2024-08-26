@@ -1,4 +1,4 @@
-### create a pod named `pod1` with `nginx` image. Schedule it on the `node01` node using `requiredDuringSchedulingIgnoredDuringExecution` node affinity, check the label on the node.
+### create a pod named `pod1` with `nginx` image. Set node affinity for node `node01` using `requiredDuringSchedulingIgnoredDuringExecution`, check the label on the node.
     
 <details><summary>Solution</summary>
 <p>
@@ -18,9 +18,9 @@ spec:
         nodeSelectorTerms:
         - matchExpressions:
           - key: scheduleNodes
-            operator: Equal
+            operator: In
             values:
-            - True
+            - "true"
   containers:
   - image: nginx
     name: pod1

@@ -36,7 +36,7 @@
               nodeSelectorTerms:
               - matchExpressions:
                 - key: scheduleNodes
-                  operator: Equal
+                  operator: In
                   values:
                   - true
         containers:

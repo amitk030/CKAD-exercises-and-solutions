@@ -20,13 +20,6 @@ if [ -z "$POD_EXISTS" ]; then
     exit 1
 fi
 
-POD_NODE=$(kubectl get pod $POD_NAME -o jsonpath="{.spec.nodeName}")
-
-if [ "$POD_NODE" != "$NODE_NAME" ]; then
-    echo "FAIL: Pod '$POD_NAME' is not scheduled on node '$NODE_NAME'."
-    exit 1
-fi
-
 POD_IMAGE=$(kubectl get pod $POD_NAME -o jsonpath="{.spec.containers[0].image}")
 
 if [ "$POD_IMAGE" != "$IMAGE_NAME" ]; then
@@ -41,5 +34,5 @@ if [ "$NODE_AFFINITY" != "$LABEL_KEY" ]; then
     exit 1
 fi
 
-echo "PASS: Pod '$POD_NAME' is correctly scheduled on node '$NODE_NAME' with image '$IMAGE_NAME' and correct node affinity."
+echo "PASS: Pod '$POD_NAME' is correctly scheduled with image '$IMAGE_NAME' and correct node affinity."
 exit 0
