@@ -26,7 +26,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Node Selector](./practice-challenges/Node%20Selector/README.md)
 - [Taints and Tolarations](./practice-challenges/Taints%20&%20Tolerations/README.md)
 - [Node Affinity](./practice-challenges/Node%20Affinity/README.md)
-- Multi-container Pods
+- [Multi-container Pods](./practice-challenges/Muti%20Container%20Pods/README.md)
 - Init Containers
 - Liveness and Readiness Probe
 - Container Logging

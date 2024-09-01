@@ -13,6 +13,7 @@
     { "path": "resource_requests"},
     { "path": "node_selector"},
     { "path": "taint_and_tolerations"},
-    { "path": "node_affinity"}
+    { "path": "node_affinity"},
+    { "path": "multi_container_pods"}
   ]
 }
