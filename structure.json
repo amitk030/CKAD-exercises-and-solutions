@@ -14,6 +14,7 @@
     { "path": "node_selector"},
     { "path": "taint_and_tolerations"},
     { "path": "node_affinity"},
-    { "path": "multi_container_pods"}
+    { "path": "multi_container_pods"},
+    { "path": "init_containers"}
   ]
 }
