@@ -19,7 +19,7 @@ fi
 
 echo "Both 'nginx' and 'busybox' containers are present in the pod."
 
-BUSYBOX_COMMAND=$(kubectl get pod "$POD_NAME" -n "$NAMESPACE" -o jsonpath='{.spec.containers[?(@.name=="busybox")].args}')
+BUSYBOX_COMMAND=$(kubectl exec "$POD_NAME" -n "$NAMESPACE" -c busybox -- ps | grep "sleep 3600")
 
 if [[ "$BUSYBOX_COMMAND" != *"sleep"* || "$BUSYBOX_COMMAND" != *"3600"* ]]; then
     echo "The 'busybox' container is NOT running the command 'sleep 3600'."
