@@ -1,5 +1,3 @@
-## Multi Container Pods
-
 [Multi Container Pods](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/)
 </br>
 

@@ -8,10 +8,10 @@
 k get po -n nano
 
 # list the env of busybox container & save it to a file
-k exec -ti worker -c busybox -- env
+k exec -ti worker -n nano -c busybox -- env
 
 # or
-k exec -ti worker -c busybox -- env > busybox.txt
+k exec -ti worker -n nano -c busybox -- printenv > busybox.txt
 ```
 
 </p>
