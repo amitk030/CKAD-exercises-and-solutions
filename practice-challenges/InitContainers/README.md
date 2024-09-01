@@ -36,7 +36,7 @@
             name: setup
         containers:
         - image: nginx
-          name: nginx
+          name: serve
         dnsPolicy: ClusterFirst
         restartPolicy: Always
       status: {}
@@ -69,7 +69,7 @@
                 mountPath: /set
         containers:
         - image: nginx
-          name: nginx
+          name: serve
           volumeMounts:
             - name: storage
               mountPath: /usr/share/index/html
@@ -108,7 +108,7 @@
                 mountPath: /set
         containers:
         - image: nginx
-          name: nginx
+          name: serve
           volumeMounts:
             - name: storage
               mountPath: /usr/share/index/html

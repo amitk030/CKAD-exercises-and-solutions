@@ -1,6 +1,6 @@
 {
   "title": "Init Containers",
-  "description": "Setup containers with init containers",
+  "description": "Setup containers with init containers(inprgress...)",
   "details": {
     "intro": {
       "text": "start.md"

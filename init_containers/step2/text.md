@@ -18,7 +18,7 @@ spec:
       name: setup
   containers:
   - image: nginx
-    name: nginx
+    name: serve
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
