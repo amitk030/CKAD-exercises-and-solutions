@@ -18,6 +18,7 @@
       },
       {
         "title": "Create and mount volume on the pods",
+        "background": "step3/background.sh",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       },

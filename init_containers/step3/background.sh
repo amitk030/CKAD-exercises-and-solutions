@@ -1,0 +1,1 @@
+kubectl get po stew -n demeter -o yaml > pod.yaml

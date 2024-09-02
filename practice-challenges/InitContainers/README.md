@@ -45,7 +45,7 @@
       </p>
     </details>
 
-1.  ### Take `stew` pod created from `demeter` namespace, there exist a yaml file `pod.yaml` for reference & use. create a volume named `storage` in the `stew` pod of type emptyDir. Mount `storage` volume on initContainer at path `/set` and run a command in init container `echo "this is nginx index page" > /set/index.html`. Mount same volume in nginx container at path `/usr/share/nginx/html`. Do these updates in `pod.yaml`. Delete & create the pod again
+1.  ### Take `stew` pod created from `demeter` namespace, there exist a yaml file `pod.yaml` for reference & use. create a volume named `storage` in the `stew` pod of type `emptyDir`. Mount `storage` volume on initContainer at path `/set` and run a command in init container `echo "this is nginx index page" > /set/index.html`. Mount same volume in nginx container at path `/usr/share/nginx/html`. Do these updates in `pod.yaml`. Delete & create the pod again
 
     <details><summary>Solution</summary>
       <p>
@@ -72,7 +72,7 @@
           name: serve
           volumeMounts:
             - name: storage
-              mountPath: /usr/share/index/html
+              mountPath: /usr/share/nginx/html
         dnsPolicy: ClusterFirst
         restartPolicy: Always
         volumes:
@@ -111,7 +111,7 @@
           name: serve
           volumeMounts:
             - name: storage
-              mountPath: /usr/share/index/html
+              mountPath: /usr/share/nginx/html
           ports:
             - containerPort: 80
         dnsPolicy: ClusterFirst
@@ -135,7 +135,7 @@
       k get po stew -o wide
 
       # make request on port 80
-      wget -O <IP>:80
+      wget -O- <IP>
       ```
 
       </p>

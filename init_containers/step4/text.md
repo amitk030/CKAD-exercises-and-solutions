@@ -25,7 +25,7 @@ spec:
     name: serve
     volumeMounts:
       - name: storage
-        mountPath: /usr/share/index/html
+        mountPath: /usr/share/nginx/html
     ports:
       - containerPort: 80
   dnsPolicy: ClusterFirst
@@ -38,8 +38,8 @@ status: {}
 # check pod ip with
 k get po stew -o wide
 
-# make request on port 80
-wget -O http://<IP>:80
+# make request on port 80, it reflects changes from init container
+wget -O- <IP>
 ```
 </p>
 </details>
