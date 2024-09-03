@@ -15,6 +15,7 @@
     { "path": "taint_and_tolerations"},
     { "path": "node_affinity"},
     { "path": "multi_container_pods"},
-    { "path": "init_containers"}
+    { "path": "init_containers"},
+    { "path": "readiness_and_liveness_probe"}
   ]
 }

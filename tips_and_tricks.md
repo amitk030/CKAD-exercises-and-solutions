@@ -23,3 +23,8 @@ Delete a pod with 0 grace period:
 ```bash
 k delete po <pod-name> --force --grace-period=0
 ```
+
+Check various details with `explain` command:
+```bash
+k explain pod.spec #for example
+```

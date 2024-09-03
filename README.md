@@ -27,8 +27,8 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Taints and Tolarations](./practice-challenges/Taints%20&%20Tolerations/README.md)
 - [Node Affinity](./practice-challenges/Node%20Affinity/README.md)
 - [Multi-container Pods](./practice-challenges/Muti%20Container%20Pods/README.md)
-- Init Containers
-- Liveness and Readiness Probe
+- [Init Containers](./practice-challenges/InitContainers/README.md)
+- [Liveness and Readiness Probe](./practice-challenges/Liveness%20&%20Readiness%20Probe/README.md)
 - Container Logging
 - Deployments
 - Deployment types(Rolling Update, Blue Green, Canary)
