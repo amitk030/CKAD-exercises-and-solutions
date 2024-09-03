@@ -4,7 +4,7 @@ NAMESPACE="demeter"
 POD_NAME="stew"
 INIT_CONTAINER_NAME="setup"
 INIT_CONTAINER_IMAGE="busybox"
-INIT_CONTAINER_COMMAND='echo "this is nginx index page" > /set/index.html'
+INIT_CONTAINER_COMMAND="echo 'this is nginx index page' > /set/index.html"
 MAIN_CONTAINER_NAME="serve"
 MAIN_CONTAINER_IMAGE="nginx"
 VOLUME_NAME="storage"
@@ -34,9 +34,9 @@ echo "Init container '$INIT_CONTAINER_NAME' is using the correct image '$INIT_CO
 
 INIT_CONTAINER_COMMAND_FOUND=$(kubectl get pod "$POD_NAME" -n "$NAMESPACE" -o jsonpath="{.spec.initContainers[?(@.name=='$INIT_CONTAINER_NAME')].command}" | jq -r '. | join(" ")')
 
-if [[ "$INIT_CONTAINER_COMMAND_FOUND" != *"$EXPECTED_INIT_COMMAND"* ]]; then
+if [[ "$INIT_CONTAINER_COMMAND_FOUND" != *"$INIT_CONTAINER_COMMAND"* ]]; then
     echo "Init container '$INIT_CONTAINER_NAME' is NOT running the expected command."
-    echo "Expected command: $EXPECTED_INIT_COMMAND"
+    echo "Expected command: $INIT_CONTAINER_COMMAND"
     echo "Found command: $INIT_CONTAINER_COMMAND_FOUND"
     exit 1
 fi
