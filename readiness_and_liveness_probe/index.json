@@ -18,13 +18,13 @@
       },
       {
         "title": "Pod & liveness probe",
-        "text": "step2/text.md",
-        "verify": "step2/verify.sh"
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
       },
       {
         "title": "Liveness probe with delay and period",
-        "text": "step2/text.md",
-        "verify": "step2/verify.sh"
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
       }
     ],
     "finish": {
