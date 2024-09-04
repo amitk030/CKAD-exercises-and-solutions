@@ -26,6 +26,12 @@ status: {}
 
 # check details of the pod
 k describe po bitto
+
+# check the logs
+k logs bitto
+
+# write the logs in issue.txt
+k logs bitto > issue.txt
 ```
 </p>
 </details>

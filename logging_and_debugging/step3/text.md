@@ -4,6 +4,7 @@
   <p>
 
   ```bash
+  # issue is with the port on which readiness probe is trying to connect
 
   # current pod
   apiVersion: v1

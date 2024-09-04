@@ -3,7 +3,7 @@
 NAMESPACE="distro"
 POD_NAME="bbox"
 EXPECTED_IMAGE="busybox"
-EXPECTED_COMMAND='i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done'
+EXPECTED_COMMAND='i=0; while true; do echo '$i: $(date)'; i=$((i+1)); sleep 1; done'
 
 if ! kubectl get namespace "$NAMESPACE" >/dev/null 2>&1; then
     echo "Namespace '$NAMESPACE' does not exist."

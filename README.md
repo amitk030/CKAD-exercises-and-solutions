@@ -29,7 +29,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Multi-container Pods](./practice-challenges/Muti%20Container%20Pods/README.md)
 - [Init Containers](./practice-challenges/InitContainers/README.md)
 - [Liveness and Readiness Probe](./practice-challenges/Liveness%20&%20Readiness%20Probe/README.md)
-- Container Logging
+- [Container Logging](./practice-challenges/Logging%20&%20Debugging/README.md)
 - Deployments
 - Deployment types(Rolling Update, Blue Green, Canary)
 - services

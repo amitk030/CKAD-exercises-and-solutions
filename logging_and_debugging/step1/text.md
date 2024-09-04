@@ -1,4 +1,4 @@
-### create a namespace `distro`.Run a `busybox` pod name `bbox` with command `i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done` in `distro` namespace. Tails logs of the pod. 
+### create a namespace `distro`.Run a `busybox` pod name `bbox` with command `i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done` in distro namespace. Tails logs of the pod. 
     
 <details><summary>Solution</summary>
 <p>
@@ -26,7 +26,7 @@ spec:
 status: {}
 
 # tail the logs
-k logs bbox -n distro -t
+k logs bbox -n distro -f
 ```
 </p>
 </details>
