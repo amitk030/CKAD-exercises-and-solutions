@@ -16,6 +16,7 @@
     { "path": "node_affinity"},
     { "path": "multi_container_pods"},
     { "path": "init_containers"},
-    { "path": "readiness_and_liveness_probe"}
+    { "path": "readiness_and_liveness_probe"},
+    { "path": "logging_and_debugging"}
   ]
 }
