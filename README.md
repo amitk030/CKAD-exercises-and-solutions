@@ -30,7 +30,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Init Containers](./practice-challenges/InitContainers/README.md)
 - [Liveness and Readiness Probe](./practice-challenges/Liveness%20&%20Readiness%20Probe/README.md)
 - [Container Logging](./practice-challenges/Logging%20&%20Debugging/README.md)
-- Deployments
+- [Deployments](./practice-challenges/Deployment/README.md)
 - Deployment types(Rolling Update, Blue Green, Canary)
 - services
 - Ingress

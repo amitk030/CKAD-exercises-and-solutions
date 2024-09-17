@@ -4,8 +4,6 @@
 <p>
 
 ```bash
-# create the namespace
-k create ns nano
 
 # create pod with the specified command
 apiVersion: v1
