@@ -2,7 +2,7 @@
 
 [Read more about Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
 </br>
-[Tips and Tricks](../../tips_and_tricks.md)
+[Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
 ##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
 
@@ -144,7 +144,7 @@
       k run temp --image=busybox -ti --rm -- sh
 
       # inside the shell run
-      \# wget -O- ip:80
+      \# wget -qO- ip:80
 
       ```
 

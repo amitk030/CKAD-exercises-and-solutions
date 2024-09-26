@@ -2,7 +2,7 @@
 
 [Service Account](https://kubernetes.io/docs/concepts/security/service-accounts/)
 </br>
-[Tips and Tricks](../../tips_and_tricks.md)
+[Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
 ##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
 

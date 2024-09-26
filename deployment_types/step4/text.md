@@ -1,6 +1,6 @@
 ### There exist a namespace `blue-green`, a deployment named `blue`. Also a service named `nginx-svc` exposing the `nginx` deployment on port `80`. If you request the service it will return `This is blue deployment`. Create another deployment named `green` with label `mark=green` & `image=nginx:1.19.8` and make changes such that it should return `This is green deployment` while calling `nginx-svc` service. Delete `blue` deployment.
 
-#### make request to the service now it should return `This is green deployment`(by running `wget -O- <nginx-svc-ip-address>`).
+#### make request to the service now it should return `This is green deployment`(by running `wget -qO- <nginx-svc-ip-address>`).
 
 <details><summary>Solution</summary>
 <p>
@@ -47,7 +47,7 @@ k get svc -n blue-green
 # nginx-svc   ClusterIP   10.110.196.45   <none>        80/TCP    6m16s
 
 # make request
-wget -O- <nginx-svc-cluster-ip>
+wget -qO- <nginx-svc-cluster-ip>
 
 # returns: This is green deployment
 ```

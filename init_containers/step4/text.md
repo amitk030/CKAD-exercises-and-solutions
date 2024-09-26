@@ -39,7 +39,7 @@ status: {}
 k get po stew -o wide
 
 # make request on port 80, it reflects changes from init container
-wget -O- <IP>
+wget -qO- <IP>
 ```
 </p>
 </details>

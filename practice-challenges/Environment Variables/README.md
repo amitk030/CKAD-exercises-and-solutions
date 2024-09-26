@@ -4,7 +4,7 @@
 </br>
 [Imperative commands for env variables](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_set/kubectl_set_env/)
 </br>
-[Tips and Tricks](../../tips_and_tricks.md)
+[Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
 ##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
 

@@ -7,4 +7,4 @@
 [Canary Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#canary-deployment)
 </br>
 
-[Tips and Tricks](../../tips_and_tricks.md)
+[Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
