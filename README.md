@@ -31,7 +31,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Liveness and Readiness Probe](./practice-challenges/Liveness%20&%20Readiness%20Probe/README.md)
 - [Container Logging](./practice-challenges/Logging%20&%20Debugging/README.md)
 - [Deployments](./practice-challenges/Deployment/README.md)
-- Deployment types(Rolling Update, Blue Green, Canary)
+- [Deployment types(Rolling Update, Blue Green, Canary)](./practice-challenges/Deployment%20Types/README.md)
 - services
 - Ingress
 - Network Policies
