@@ -12,25 +12,25 @@ if [ "$deployment" != "green" ]; then
   exit 1
 fi
 
-replicas=$(kubectl get deployment nginx -n blue-green -o jsonpath='{.spec.replicas}')
+replicas=$(kubectl get deployment green -n blue-green -o jsonpath='{.spec.replicas}')
 if [ "$replicas" -ne 1 ]; then
-  echo "Deployment 'nginx' does not have 1 replica."
+  echo "Deployment 'green' does not have 1 replica."
   exit 1
 fi
 
-image=$(kubectl get deployment nginx -n blue-green -o jsonpath='{.spec.template.spec.containers[0].image}')
-if [ "$image" != "nginx:1.18.0" ]; then
-  echo "Deployment 'nginx' does not use the image 'nginx:1.18.0'."
+image=$(kubectl get deployment green -n blue-green -o jsonpath='{.spec.template.spec.containers[0].image}')
+if [ "$image" != "nginx:1.19.8" ]; then
+  echo "Deployment 'green' does not use the image 'nginx:1.19.8'."
   exit 1
 fi
 
-init_command=$(kubectl get deployment nginx -n blue-green -o jsonpath='{.spec.template.spec.initContainers[0].command}')
+init_command=$(kubectl get deployment green -n blue-green -o jsonpath='{.spec.template.spec.initContainers[0].command}' | jq -r '. | join(" ")')
 if [[ "$init_command" != *"echo 'This is green deployment' > /sd/index.html"* ]]; then
   echo "Init container command is incorrect."
   exit 1
 fi
 
-volume_mounts=$(kubectl get deployment nginx -n blue-green -o jsonpath='{.spec.template.spec.containers[0].volumeMounts[0].mountPath}')
+volume_mounts=$(kubectl get deployment green -n blue-green -o jsonpath='{.spec.template.spec.containers[0].volumeMounts[0].mountPath}')
 if [ "$volume_mounts" != "/usr/share/nginx/html" ]; then
   echo "Volume mount path is incorrect."
   exit 1

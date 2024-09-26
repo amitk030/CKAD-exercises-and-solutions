@@ -9,7 +9,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: nginx
-  name: nginx
+  name: blue
   namespace: blue-green
 spec:
   replicas: 1
