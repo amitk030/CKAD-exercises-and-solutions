@@ -24,7 +24,7 @@ if [ "$image_v1" != "nginx:1.18.0" ]; then
   exit 1
 fi
 
-init_command_v1=$(kubectl get deployment app-v1 -n canary -o jsonpath='{.spec.template.spec.initContainers[0].command}')
+init_command_v1=$(kubectl get deployment app-v1 -n canary -o jsonpath='{.spec.template.spec.initContainers[0].command}' | jq -r '. | join(" ")')
 if [[ "$init_command_v1" != *"echo 'App Version V1' > /sd/index.html"* ]]; then
   echo "Init container command for 'app-v1' is incorrect."
   exit 1
@@ -78,7 +78,7 @@ if [ "$image_v2" != "nginx:1.19.8" ]; then
   exit 1
 fi
 
-init_command_v2=$(kubectl get deployment app-v2 -n canary -o jsonpath='{.spec.template.spec.initContainers[0].command}')
+init_command_v2=$(kubectl get deployment app-v2 -n canary -o jsonpath='{.spec.template.spec.initContainers[0].command}' | jq -r '. | join(" ")')
 if [[ "$init_command_v2" != *"echo 'App Version V2' > /sd/index.html"* ]]; then
   echo "Init container command for 'app-v2' is incorrect."
   exit 1

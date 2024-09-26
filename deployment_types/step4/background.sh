@@ -45,5 +45,5 @@ spec:
           emptyDir: {}
 EOF
 
-kubectl expose deployment nginx --type=ClusterIP --name=nginx-svc --port=80 --target-port=80 --selector=mark=blue --namespace=blue-green
+kubectl expose deployment blue --type=ClusterIP --name=nginx-svc --port=80 --target-port=80 --selector=mark=blue --namespace=blue-green
 

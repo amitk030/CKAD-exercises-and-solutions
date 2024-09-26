@@ -12,7 +12,7 @@
         creationTimestamp: null
         labels:
           app: nginx
-        name: blue
+        name: green
       ...
       ...
       labels:
