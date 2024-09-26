@@ -23,13 +23,13 @@
       },
       {
         "title": "Blue Green Deployment",
-        "background": "step4/background.md",
+        "background": "step4/background.sh",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
       {
         "title": "Canary Deployment",
-        "background": "step5/background.md",
+        "background": "step5/background.sh",
         "text": "step5/text.md",
         "verify": "step5/verify.sh"
       }

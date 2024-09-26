@@ -18,6 +18,7 @@
     { "path": "init_containers"},
     { "path": "readiness_and_liveness_probe"},
     { "path": "logging_and_debugging"},
-    { "path": "deployment"}
+    { "path": "deployment"},
+    { "path": "deployment_types"}
   ]
 }
