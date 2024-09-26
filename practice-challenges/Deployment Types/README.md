@@ -127,26 +127,6 @@
       </p>
     </details>
 
-1.  ### update `nginx` deployment to use image `nginx:1.19.8`. check deployment status running `k rollout status deploy nginx`. check no. of pods surge up to 6 while updation(check this by running `k get deploy nginx` )
-
-
-    <details><summary>Solution</summary>
-      <p>
-
-      ```bash
-      #update the deployment
-      k edit deploy nginx 
-      # then edit the container image
-    
-      OR
-
-      # set new image on the deployment
-      k set image deploy nginx nginx=nginx:1.19.8
-      ```
-
-      </p>
-    </details>
-
 1.  ### There exist a namespace `blue-green`, a deployment named `blue`. Also a service named `nginx-svc` exposing the `nginx` deployment on port `80`. If you request the service it will return `This is blue deployment`. Create another deployment named `green` with label `mark=green` & `image=nginx:1.19.8` and make changes such that it should return `This is green deployment` while calling `nginx-svc` service. Delete `blue` deployment.
 
     #### make request to the service now it should return `This is green deployment`.
@@ -170,7 +150,7 @@
         creationTimestamp: null
         labels:
           app: nginx
-        name: nginx
+        name: blue
         namespace: blue-green
       spec:
         replicas: 1
@@ -230,6 +210,13 @@
 
       ```bash
       # update the deployment
+        ...
+        ...
+        metadata:
+          creationTimestamp: null
+          labels:
+            app: nginx
+          name: blue
             ...
             ...
             labels:
