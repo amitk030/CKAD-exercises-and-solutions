@@ -7,7 +7,7 @@
 #generate yaml file
 k create deploy nginx --image=nginx:1.18.0 --replicas=4 --dry-run=client -o yaml > deploy.yaml
 
-#update pod.yaml
+#update deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:

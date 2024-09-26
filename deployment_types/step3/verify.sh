@@ -19,7 +19,13 @@ if [ "$replicas" -ne 4 ]; then
 fi
 
 strategy=$(kubectl get deployment nginx -o jsonpath='{.spec.strategy.type}')
-if [ "$strategy" != "Recreate" ]; then
+if [ "$strategy" != "RollingUpdate" ]; then
+  echo "Deployment 'nginx' does not use the 'Recreate' strategy."
+  exit 1
+fi
+
+max_surge=$(kubectl get deployment nginx -o jsonpath='{.spec.strategy.rollingUpdate.maxSurge}')
+if [ "$max_surge" != "50%" ]; then
   echo "Deployment 'nginx' does not use the 'Recreate' strategy."
   exit 1
 fi
