@@ -5,6 +5,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: nginx
+    app: myapp
   name: nginx
 spec:
   nodeName: node01
