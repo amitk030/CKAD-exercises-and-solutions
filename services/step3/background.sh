@@ -1,3 +1,5 @@
+kubectl create namespace setup
+
 kubectl apply -f - <<EOF
 apiVersion: v1
 kind: Pod

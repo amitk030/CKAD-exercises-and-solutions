@@ -1,3 +1,5 @@
+kubectl create namespace setup
+
 kubectl apply -f - <<EOF
 apiVersion: apps/v1
 kind: Deployment
