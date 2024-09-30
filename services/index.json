@@ -19,9 +19,16 @@
         "verify": "step2/verify.sh"
       },
       {
-        "title": "set capabilities for a container",
+        "title": "Expose a pod",
+        "background": "step3/background.sh",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Expose a deployment",
+        "background": "step4/background.sh",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
       }
     ],
     "finish": {
