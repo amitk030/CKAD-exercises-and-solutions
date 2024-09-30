@@ -32,7 +32,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Container Logging](./practice-challenges/Logging%20&%20Debugging/README.md)
 - [Deployments](./practice-challenges/Deployment/README.md)
 - [Deployment types(Rolling Update, Blue Green, Canary)](./practice-challenges/Deployment%20Types/README.md)
-- services
+- [Services](./practice-challenges/Services/README.md)
 - Ingress
 - Network Policies
 - Role Based Access Control (RBAC)
