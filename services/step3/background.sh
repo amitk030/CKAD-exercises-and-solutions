@@ -1,4 +1,4 @@
-kubectl create namespace setup
+kubectl create namespace setup;
 
 kubectl apply -f - <<EOF
 apiVersion: v1
@@ -8,6 +8,7 @@ metadata:
   labels:
     run: busyboc
   name: bbox
+  namespace: setup
 spec:
   nodeName: node01
   containers:
