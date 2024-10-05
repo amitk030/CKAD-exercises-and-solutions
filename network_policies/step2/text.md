@@ -4,7 +4,7 @@
   <p>
 
   ```bash
-k create -f -<<EOF
+k apply -f -<<EOF
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
