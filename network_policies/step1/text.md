@@ -3,9 +3,8 @@
 <details><summary>Solution</summary>
   <p>
 
-  ```bash
+```bash
 # Define the NetworkPolicy YAML
-k apply -f -<<EOF
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -25,11 +24,10 @@ spec:
     ports:
     - protocol: TCP
       port: 80
-EOF
 
 # Apply the NetworkPolicy
 kubectl create -f network-policy.yaml
-  ```
+```
 
   </p>
 </details>

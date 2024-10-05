@@ -3,8 +3,8 @@
 <details><summary>Solution</summary>
   <p>
 
-  ```bash
-k apply -f -<<EOF
+```bash
+# network_policy.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -24,8 +24,10 @@ spec:
     ports:
     - protocol: TCP
       port: 80
-EOF
-  ```
+
+
+k create -f network_policy.yaml
+```
 
   </p>
 </details>

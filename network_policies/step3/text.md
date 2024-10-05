@@ -3,12 +3,12 @@
 <details><summary>Solution</summary>
   <p>
 
-  ```bash
-  # check labels on the pods
-  k get po --show-labels
+```bash
+# check labels on the pods
+k get po --show-labels
 
 
-k apply -f -<<EOF
+# network_policy.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -28,8 +28,9 @@ spec:
     ports:
     - protocol: TCP
       port: 8080
-EOF
-  ```
+
+k create -f network_policy.yaml
+```
 
   </p>
 </details>

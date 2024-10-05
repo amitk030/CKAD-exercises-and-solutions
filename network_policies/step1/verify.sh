@@ -6,23 +6,22 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-policy=$(kubectl get networkpolicy net-ingress -o yaml)
-
-echo "$policy" | grep -q "matchLabels:\s*app: nginx"
-if [ $? -ne 0 ]; then
+policy=$(kubectl get networkpolicy net-ingress -o jsonpath='{.spec.podSelector.matchLabels.app}')
+if [ "$policy" != "nginx" ]; then
   echo "NetworkPolicy 'net-ingress' does not target pods with label 'app: nginx'."
   exit 1
 fi
 
-echo "$policy" | grep -q "from:\s*- podSelector:\s*matchLabels:\s*app: serve"
-if [ $? -ne 0 ]; then
+policy=$(kubectl get networkpolicy net-ingress -o jsonpath='{.spec.ingress[*].from[*].podSelector.matchLabels.app}')
+if [[ ! "$policy" =~ "serve" ]]; then
   echo "NetworkPolicy 'net-ingress' does not allow traffic from pods with label 'app: serve'."
   exit 1
 fi
 
-echo "$policy" | grep -q "ports:\s*- protocol: TCP\s*port: 80"
-if [ $? -ne 0 ]; then
-  echo "NetworkPolicy 'net-ingress' does not allow traffic on port 80."
+protocol=$(kubectl get networkpolicy net-ingress -o jsonpath='{.spec.ingress[*].ports[*].protocol}')
+port=$(kubectl get networkpolicy net-ingress -o jsonpath='{.spec.ingress[*].ports[*].port}')
+if [ "$protocol" != "TCP" ] || [ "$port" != "80" ]; then
+  echo "NetworkPolicy 'net-ingress' does not allow traffic on port 80 with protocol TCP."
   exit 1
 fi
 
