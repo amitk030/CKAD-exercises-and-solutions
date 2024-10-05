@@ -1,4 +1,4 @@
-### There exist a `bbox` pod in `setup` namespace. Expose pod on port `80`.
+### There exist a `bbox` pod in `setup` namespace. Expose pod on port `80` name the service `bbox-svc`.
 
 <details><summary>Solution</summary>
   <p>
