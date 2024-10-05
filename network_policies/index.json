@@ -1,0 +1,35 @@
+{
+  "title": "Network Policies",
+  "description": "Ingress and Egress network policies",
+  "details": {
+    "intro": {
+      "text": "start.md"
+    },
+    "steps": [
+      {
+        "title": "Create an Ingress Network Policy",
+        "background": "step1/background.sh",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Update a Network Policy",
+        "background": "step2/background.sh",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Create a Egress Network Policy",
+        "background": "step3/background.sh",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

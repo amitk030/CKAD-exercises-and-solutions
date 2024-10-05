@@ -7,7 +7,7 @@
 
 ##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
 
-1.  ### A deployment `nginx` already exists with 2 pods and a service `ngx-svc` exposed on port `80`. create a network policy such that only pods with lable `app=serve` will be about to make request to these nginx pods.
+1.  ### A deployment `nginx` already exists with 2 pods and a service `ngx-svc` exposed on port `80`. create a network policy such that only pods with lable `app=serve` will be about to make request to these nginx pods on port `80`.
 
 <details><summary>Setup</summary>
   <p>
