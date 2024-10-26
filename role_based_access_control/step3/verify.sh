@@ -11,7 +11,7 @@ if [ $? -ne 0 ]; then
 fi
 
 kubectl get rolebinding $ROLEBINDING_NAME -o json | jq -e \
-  ".subjects[] | select(.name == \"$USER_NAME\") and .roleRef.name == \"$ROLE_NAME\"" > /dev/null 2>&1
+  'select(.subjects[] | select(.name == "'"$USER_NAME"'" and .kind == "User")) | select(.roleRef.name == "'"$ROLE_NAME"'")' > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
   echo "Rolebinding $ROLEBINDING_NAME is correctly configured."
