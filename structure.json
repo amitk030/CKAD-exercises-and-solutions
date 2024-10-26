@@ -21,6 +21,7 @@
     { "path": "deployment"},
     { "path": "deployment_types"},
     { "path": "services"},
-    { "path": "network_policies"}
+    { "path": "network_policies"},
+    { "path": "role_based_access_control"}
   ]
 }

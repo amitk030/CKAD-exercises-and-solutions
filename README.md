@@ -33,8 +33,8 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Deployments](./practice-challenges/Deployment/README.md)
 - [Deployment types(Rolling Update, Blue Green, Canary)](./practice-challenges/Deployment%20Types/README.md)
 - [Services](./practice-challenges/Services/README.md)
-- Network Policies
-- Role Based Access Control (RBAC)
+- [Network Policies](./practice-challenges/network%20policies/README.md)
+- [Role Based Access Control (RBAC)](./practice-challenges/Role%20Based%20Access%20Control(RBAC)/README.md)
 - Jobs
 - CronJobs
 - Custom Resource Definition
