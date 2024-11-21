@@ -35,8 +35,7 @@ Along with these textual questionaries. <a href="https://killercoda.com/amitk" t
 - [Services](./practice-challenges/Services/README.md)
 - [Network Policies](./practice-challenges/network%20policies/README.md)
 - [Role Based Access Control (RBAC)](./practice-challenges/Role%20Based%20Access%20Control(RBAC)/README.md)
-- Jobs
-- CronJobs
+- [Jobs](./practice-challenges/Jobs/README.md)
 - Custom Resource Definition
 - Helm fundamentals
 
