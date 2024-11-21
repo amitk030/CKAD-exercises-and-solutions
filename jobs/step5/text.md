@@ -1,5 +1,7 @@
 ### Create a CronJob named `eg-cron` that runs every minute and logs `Every minute CronJob`.
 
+**Note:** verify atleast after one job is completed.
+
 <details><summary>Solution</summary>
   <p>
 
@@ -12,6 +14,9 @@
   spec:
     schedule: "* * * * *"
     jobTemplate:
+      metadata:
+        labels:
+          job: eg-cron
       spec:
         template:
           spec:

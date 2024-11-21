@@ -14,7 +14,7 @@ if [ "$schedule" != "* * * * *" ]; then
   exit 1
 fi
 
-job_name=$(kubectl get jobs --selector=job-name=eg-cron --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1].metadata.name}')
+job_name=$(kubectl get jobs --selector=job=eg-cron --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-1].metadata.name}')
 log_output=$(kubectl logs job/$job_name)
 
 if [[ "$log_output" != *"Every minute CronJob"* ]]; then

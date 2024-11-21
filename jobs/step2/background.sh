@@ -18,5 +18,5 @@ EOF
 
 chmod +x script.sh
 
-k create configmap job-script --from-file=script.sh
+kubectl create configmap job-script --from-file=script.sh
 

@@ -16,4 +16,12 @@ else
   echo "Job 'script-job' exists."
 fi
 
-echo "Both ConfigMap 'job-script' and Job 'script-job' exist."
+volume_mounts=$(kubectl get job script-job -o jsonpath='{.spec.template.spec.volumes[?(@.configMap.name=="job-script")]}')
+if [ -z "$volume_mounts" ]; then
+  echo "Job 'script-job' does not mount ConfigMap 'job-script' as a volume."
+  exit 1
+else
+  echo "Job 'script-job' mounts ConfigMap 'job-script' as a volume."
+fi
+
+echo "Both ConfigMap 'job-script' and Job 'script-job' exist and the job mounts the ConfigMap as a volume."
