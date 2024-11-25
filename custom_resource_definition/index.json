@@ -1,0 +1,32 @@
+{
+  "title": "Custom Resource Definition",
+  "description": "Create & manage custom resource definitions",
+  "details": {
+    "intro": {
+      "text": "start.md"
+    },
+    "steps": [
+      {
+        "title": "Create a CRD",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Create a custom resource",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Update a Custom Resource",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

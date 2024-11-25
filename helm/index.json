@@ -1,0 +1,42 @@
+{
+  "title": "Helm",
+  "description": "Intro to helm",
+  "details": {
+    "intro": {
+      "text": "start.md"
+    },
+    "steps": [
+      {
+        "title": "Install Helm",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Add a repository",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Install a chart",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Upgrade a chart",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Uninstall a chart",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

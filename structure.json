@@ -23,6 +23,8 @@
     { "path": "services"},
     { "path": "network_policies"},
     { "path": "role_based_access_control"},
-    { "path": "jobs"}
+    { "path": "jobs"},
+    { "path": "custom_resource_definition"},
+    { "path": "helm"}
   ]
 }
