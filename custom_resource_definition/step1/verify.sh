@@ -11,9 +11,9 @@ if [ $? -eq 0 ]; then
   
   FIELDS=$(kubectl get crd $CRD_NAME -o jsonpath='{.spec.versions[0].schema.openAPIV3Schema.properties.spec.properties}')
   
-  if echo $FIELDS | grep -q '"from": {"type": "string"}' && \
-     echo $FIELDS | grep -q '"to": {"type": "string"}' && \
-     echo $FIELDS | grep -q '"seats": {"type": "integer"}'; then
+  if echo $FIELDS | jq -e '.from.type == "string"' && \
+     echo $FIELDS | jq -e '.to.type == "string"' && \
+     echo $FIELDS | jq -e '.seats.type == "integer"'; then
     echo "CRD has the correct fields: 'from' (string), 'to' (string), 'seats' (integer)."
   else
     echo "CRD does not have the correct fields."
