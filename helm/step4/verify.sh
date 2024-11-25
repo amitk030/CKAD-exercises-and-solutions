@@ -1,10 +1,11 @@
 #!/bin/bash
 
-current_version=$(helm list -f my-wordpress | grep my-wordpress | awk '{print $9}')
+chart_status=$(helm list -f my-wordpress | grep my-wordpress)
 
-if [ "$current_version" == "9.0.0" ]; then
-  echo "my-wordpress chart is upgraded to version 9.0.0"
+if [ -z "$chart_status" ]; then
+  echo "The wordpress chart is uninstalled."
+  exit 0
 else
-  echo "my-wordpress chart is not upgraded to version 9.0.0. Current version: $current_version"
+  echo "The wordpress chart is still installed."
   exit 1
 fi

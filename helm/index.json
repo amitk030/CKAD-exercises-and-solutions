@@ -22,14 +22,9 @@
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Upgrade a chart",
+        "title": "Uninstall a chart",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
-      },
-      {
-        "title": "Uninstall a chart",
-        "text": "step5/text.md",
-        "verify": "step5/verify.sh"
       }
     ],
     "finish": {
