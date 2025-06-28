@@ -28,7 +28,11 @@ fi
 
 echo "Environment variables retrieved from busybox container."
 
-if diff -q "$ENV_FILE" /tmp/busybox_env_from_pod.txt >/dev/null; then
+# Sort both files before comparison to ignore order differences
+sort "$ENV_FILE" > /tmp/busybox_env_sorted.txt
+sort /tmp/busybox_env_from_pod.txt > /tmp/busybox_env_from_pod_sorted.txt
+
+if diff -q /tmp/busybox_env_sorted.txt /tmp/busybox_env_from_pod_sorted.txt >/dev/null; then
     echo "Environment variables match the contents of '$ENV_FILE'."
     exit 0
 else
