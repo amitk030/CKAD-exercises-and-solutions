@@ -5,7 +5,7 @@
 
   ```bash
   # create service yaml file
-  k create svc nodeport ng-svc --tcp=80:80 --target-port=80 --dry-run=client -o yaml > service.yaml
+  k create svc nodeport ng-svc --tcp=80:80 --node-port=30002 --dry-run=client -o yaml > service.yaml
   
   # update selector in service yaml file
   apiVersion: v1
