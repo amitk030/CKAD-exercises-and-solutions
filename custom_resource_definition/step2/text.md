@@ -1,4 +1,4 @@
-### Create a Custom Resource named `my-ticket` of type `BusTicket` in the `default` namespace.
+### Create a Custom Resource named `my-ticket` of type `BusTicket` in the `default` namespace, from `New Delhi`, to `Mumbai` and for `5` seats.
 
 <details><summary>Solution</summary>
   <p>

@@ -1,4 +1,4 @@
-### Update the `from` value of the `BusTicket` named `my-ticket` in the `default` namespace to newvalue.
+### Update the `from` value of the `BusTicket` named `my-ticket` in the `default` namespace to `Bangalore`.
   
 <details><summary>Solution</summary>
   <p>
