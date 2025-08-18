@@ -15,6 +15,11 @@
         "title": "get env",
         "text": "step-2/text.md",
         "verify": "step-2/verify.sh"
+      },
+      {
+        "title": "Troubleshoot failing pod",
+        "text": "step-3/text.md",
+        "verify": "step-3/verify.sh"
       }
     ],
     "finish": {
