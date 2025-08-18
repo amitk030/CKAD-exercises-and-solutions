@@ -18,6 +18,7 @@
       },
       {
         "title": "Troubleshoot failing pod",
+        "background": "step-3/background.sh",
         "text": "step-3/text.md",
         "verify": "step-3/verify.sh"
       }
