@@ -1,5 +1,5 @@
 #!/bin/bash
 
-kubectl run health-check-pod --image=nginx --restart=Never 2>/dev/null
+kubectl get pod health-check-pod >/dev/null 2>&1 || kubectl run health-check-pod --image=nginx --restart=Never
 sleep 2
 

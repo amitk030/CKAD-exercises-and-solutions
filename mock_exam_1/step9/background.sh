@@ -1,4 +1,4 @@
 #!/bin/bash
 
-kubectl create namespace storage-ns 2>/dev/null
+kubectl get namespace storage-ns >/dev/null 2>&1 || kubectl create namespace storage-ns
 

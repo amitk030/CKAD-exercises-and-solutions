@@ -1,5 +1,5 @@
 #!/bin/bash
 
-kubectl run broken-pod --image=invalid-image:latest --restart=Never 2>/dev/null
+kubectl get pod broken-pod >/dev/null 2>&1 || kubectl run broken-pod --image=invalid-image:latest --restart=Never
 sleep 2
 

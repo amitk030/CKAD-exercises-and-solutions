@@ -1,4 +1,4 @@
 #!/bin/bash
 
-kubectl create namespace secure-ns 2>/dev/null
+kubectl get namespace secure-ns >/dev/null 2>&1 || kubectl create namespace secure-ns
 
