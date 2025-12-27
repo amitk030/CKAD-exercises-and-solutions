@@ -26,14 +26,14 @@ Q4_S1=0; kubectl get configmap app-config >/dev/null 2>&1 && Q4_S1=1
 Q4_S2=0; [[ "$(kubectl get configmap app-config -o jsonpath='{.data.database_url}' 2>/dev/null)" == "postgresql://localhost:5432/mydb" ]] && Q4_S2=1
 Q4_S3=0; [[ "$(kubectl get configmap app-config -o jsonpath='{.data.api_key}' 2>/dev/null)" == "abc123xyz" ]] && Q4_S3=1
 Q4_S4=0; kubectl get pod config-pod >/dev/null 2>&1 && Q4_S4=1
-Q4_S5=0; kubectl get pod config-pod -o jsonpath='{.spec.containers[0].env[*].valueFrom.configMapKeyRef.name}' 2>/dev/null | grep -q "app-config" && Q4_S5=1
+Q4_S5=0; (kubectl get pod config-pod -o jsonpath='{.spec.containers[0].env[*].valueFrom.configMapKeyRef.name}' 2>/dev/null | grep -q "app-config" || kubectl get pod config-pod -o jsonpath='{.spec.containers[0].envFrom[*].configMapRef.name}' 2>/dev/null | grep -q "app-config") && Q4_S5=1
 Q4_TOTAL=$((Q4_S1 + Q4_S2 + Q4_S3 + Q4_S4 + Q4_S5))
 
 # Question 5: Secret and Pod with env vars
 Q5_S1=0; kubectl get secret db-credentials -n secure-ns >/dev/null 2>&1 && Q5_S1=1
 Q5_S2=0; [[ "$(kubectl get secret db-credentials -n secure-ns -o jsonpath='{.data.username}' 2>/dev/null | base64 -d)" == "admin" ]] && Q5_S2=1
 Q5_S3=0; kubectl get pod db-pod -n secure-ns >/dev/null 2>&1 && Q5_S3=1
-Q5_S4=0; kubectl get pod db-pod -n secure-ns -o jsonpath='{.spec.containers[0].env[*].valueFrom.secretKeyRef.name}' 2>/dev/null | grep -q "db-credentials" && Q5_S4=1
+Q5_S4=0; (kubectl get pod db-pod -n secure-ns -o jsonpath='{.spec.containers[0].env[*].valueFrom.secretKeyRef.name}' 2>/dev/null | grep -q "db-credentials" || kubectl get pod db-pod -n secure-ns -o jsonpath='{.spec.containers[0].envFrom[*].secretRef.name}' 2>/dev/null | grep -q "db-credentials") && Q5_S4=1
 Q5_TOTAL=$((Q5_S1 + Q5_S2 + Q5_S3 + Q5_S4))
 
 # Question 6: Job creation
