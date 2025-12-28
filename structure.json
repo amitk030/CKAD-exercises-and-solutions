@@ -25,7 +25,6 @@
     { "path": "role_based_access_control"},
     { "path": "jobs"},
     { "path": "custom_resource_definition"},
-    { "path": "helm"},
-    { "path": "mock_exam_1"}
+    { "path": "helm"}
   ]
 }
