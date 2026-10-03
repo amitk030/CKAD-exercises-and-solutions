@@ -1,4 +1,6 @@
 {
+  "title": "CKAD Exercises",
+  "description": "Free original Kubernetes labs for CKAD preparation. Independent community content, not Killer.sh or Linux Foundation exam material.",
   "items": [
     { "path": "pods"},
     { "path": "labels_and_selectors"},

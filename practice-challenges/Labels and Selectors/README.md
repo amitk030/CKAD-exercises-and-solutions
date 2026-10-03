@@ -4,7 +4,7 @@
 </br>
 [Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
-##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
+##### For simulated Practice problems visit [Killercoda CKAD exercises](https://killercoda.com/ckad-exercises).
 
 1.  ### name a pod `sumo` with image `nginx` and label it `tier=frontend`
     <details><summary>Solution</summary>

@@ -4,7 +4,7 @@
 </br>
 [Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
-##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
+##### For simulated Practice problems visit [Killercoda CKAD exercises](https://killercoda.com/ckad-exercises).
 
 
 1. ### create a namespace `demo` and create a resource quota `demo-quota` with hard requests `cpu=1`, `memory=1Gi` and hard limits `cpu=2`, `memory=2Gi`. 

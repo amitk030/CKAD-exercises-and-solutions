@@ -4,7 +4,7 @@
 </br>
 [Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
-##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
+##### For simulated Practice problems visit [Killercoda CKAD exercises](https://killercoda.com/ckad-exercises).
 
 1.  ### create a namespace `distro`.Run a `busybox` pod name `bbox` with command `i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done` in `distro` namespace. Tails logs of the pod. 
     <details><summary>Solution</summary>

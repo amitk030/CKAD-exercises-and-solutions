@@ -5,7 +5,7 @@
 
 [Tips and Tricks](https://github.com/amitk030/CKAD-exercises-and-solutions/blob/master/tips_and_tricks.md)
 
-##### For simulated Practice problems visit [KillerCoda](https://killercoda.com/amitk).
+##### For simulated Practice problems visit [Killercoda CKAD exercises](https://killercoda.com/ckad-exercises).
 
 1.  ### A deployment `nginx` already exists with 2 pods and a service `ngx-svc` exposed on port `80`. create a network policy such that only pods with lable `app=serve` will be about to make request to these nginx pods on port `80`.
 
